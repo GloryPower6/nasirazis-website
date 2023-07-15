@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-vectorart.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +36,14 @@
     </div>
 
     <main>
+        <div class="visitedCount-section">
+            <i class="fa-regular fa-eye"></i>
+            <p id="visitedCount"></p>
+        </div>
         <h1 id="home">Home</h1>
+        
         <p>Hello there, it's nice to see you!</p>
+
 
         <h1 id="gallery">Galeri</h1>
 
@@ -68,12 +76,56 @@
             <img src="img/me.jpg">
             <div class="about-content">
                 <h1 id="about">Tentang Saya</h1>
-                <p>Namaku Nasir Azis Jaelani. Saya adalah mahasiswa di jurusan Teknik Informatika, Fakultas Teknik,
-                    Universitas Halu Oleo, Kendari. Hobi saya seperti membuat vector art, memotret, dan hal-hal yang
+                <p>Nasir Azis Jaelani - Mahasiswa di jurusan Teknik Informatika, Fakultas Teknik,
+                    Universitas Halu Oleo, Kendari. Hobinya membuat vector art, memotret, dan hal-hal yang
                     berkaitan dengan komputer.</p>
             </div>
         </div>
+        </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Follow Me</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function getCookieValue(cookieName) {
+            var cookies = document.cookie.split("; ");
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].split("=");
+                if (cookie[0] === cookieName) {
+                    return cookie[1];
+                }
+            }
+            return "";
+        }
+
+        var visitedCount = parseInt(getCookieValue("visitedCount"));
+
+        if (isNaN(visitedCount)) {
+            visitedCount = 1;
+        } else {
+            visitedCount++;
+        }
+
+        var expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + 1);
+        document.cookie = "visitedCount=" + visitedCount + "; expires=" + expirationDate.toUTCString() + "; path=/";
+
+        document.getElementById("visitedCount").textContent = visitedCount;
+    </script>
+
 
 </body>
 

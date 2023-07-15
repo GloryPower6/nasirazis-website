@@ -3,6 +3,10 @@
     padding: 10px;
 }
 
+.gallery-section > div > h3 {
+    padding: 15px;
+}
+
 .gallery-section > img{
     max-width: 100%;
     height: auto;
@@ -21,8 +25,8 @@
     height: 100%;
     object-fit: cover;
     border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(50, 50, 50, 0.2);
 }
-
 .grid-wrapper {
     display: grid;
     grid-gap: 15px;

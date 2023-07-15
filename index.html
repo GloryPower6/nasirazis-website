@@ -24,39 +24,54 @@
             <div class="brand">
                 <div class="firstname">Nasir</div>
                 <div class="lastname">Azis</div>
-                <div class="website">Portofolio</div>
             </div>
             <ul class="navigation">
-                <li><a href="" class="active">Home</a></li>
-                <li><a href="">Projek</a></li>
-                <li><a href="">Tentang Saya</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
             </ul>
         </nav>
     </div>
 
     <main>
-        <h1>Home</h1>
-        <p>Hello there, it's nice to see you come here</p>
+        <h1 id="home">Home</h1>
+        <p>Hello there, it's nice to see you!</p>
 
-        <h1>Projek</h1>
+        <h1 id="gallery">Galeri</h1>
 
-        <h2>Galeri</h2>
-        <div>
-            <h3>Vector Art <span><a href="">@na_vector</a></span></h3>
-        </div>
 
         <div class="gallery-section">
+            <div>
+                <h3>Vector Art <span class="link"><a href="" target="_blank">@na_vector</a></span></h3>
+            </div>
             <div class="grid-wrapper">
                 <div><img src="/img/vector-art/1.jpg"></div>
                 <div><img src="/img/vector-art/2.jpg"></div>
                 <div><img src="/img/vector-art/3.jpg"></div>
             </div>
+            <div>
+                <h3>Fotografi</h3>
+            </div>
+            <div class="grid-wrapper">
+                <div><img src="/img/photograph/1.jpg"></div>
+                <div><img src="/img/photograph/2.jpg"></div>
+                <div><img src="/img/photograph/3.jpg"></div>
+                <div><img src="/img/photograph/4.jpg"></div>
+                <div><img src="/img/photograph/5.jpg"></div>
+                <div><img src="/img/photograph/6.jpg"></div>
+                <div><img src="/img/photograph/7.jpg"></div>
+                <div><img src="/img/photograph/8.jpg"></div>
+            </div>
         </div>
 
         <div class="about-section">
             <img src="/img/me.jpg">
-            <h1>Tentang Saya</h1>
-            <p>Saya adalah seorang mahasiswa di jurusan Teknik Informatika, Fakultas Teknik, Universitas Halu Oleo</p>
+            <div class="about-content">
+                <h1 id="about">Tentang Saya</h1>
+                <p>Namaku Nasir Azis Jaelani. Saya adalah mahasiswa di jurusan Teknik Informatika, Fakultas Teknik,
+                    Universitas Halu Oleo, Kendari. Hobi saya seperti membuat vector art, memotret, dan hal-hal yang
+                    berkaitan dengan komputer.</p>
+            </div>
         </div>
     </main>
 

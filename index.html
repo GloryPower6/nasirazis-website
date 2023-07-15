@@ -35,12 +35,7 @@
         </nav>
     </div>
 
-    <main>
-        <div class="visitedCount-section">
-            <i class="fa-regular fa-eye"></i>
-            <p id="visitedCount"></p>
-        </div>
-        
+    <main>     
         <h1 id="home">Home</h1>
         
         <p>Hello there, it's nice to see you!</p>
@@ -73,14 +68,14 @@
         </div>
 
         <div class="about-section">
-            <img src="img/me.jpg">
+            <h1 id="about">Tentang Saya</h1>
             <div class="about-content">
-                <h1 id="about">Tentang Saya</h1>
                 <p>Nasir Azis Jaelani - Mahasiswa di jurusan Teknik Informatika, Fakultas Teknik,
                     Universitas Halu Oleo, Kendari. Hobinya membuat vector art, memotret, dan hal-hal yang
                     berkaitan dengan komputer.</p>
+                </div>
+                <img src="img/me.jpg">
             </div>
-        </div>
         </div>
     </main>
 
@@ -98,34 +93,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function getCookieValue(cookieName) {
-            var cookies = document.cookie.split("; ");
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i].split("=");
-                if (cookie[0] === cookieName) {
-                    return cookie[1];
-                }
-            }
-            return "";
-        }
-
-        var visitedCount = parseInt(getCookieValue("visitedCount"));
-
-        if (isNaN(visitedCount)) {
-            visitedCount = 1;
-        } else {
-            visitedCount++;
-        }
-
-        var expirationDate = new Date();
-        expirationDate.setDate(expirationDate.getDate() + 1);
-        document.cookie = "visitedCount=" + visitedCount + "; expires=" + expirationDate.toUTCString() + "; path=/";
-
-        document.getElementById("visitedCount").textContent = visitedCount;
-    </script>
-
 
 </body>
 

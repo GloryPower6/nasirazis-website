@@ -1,14 +1,30 @@
-*, html, body{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Inter', sans-serif;
+    padding: 10px;
 }
 
 main{
-    margin: 5em;
+    margin: 2.5em;
+}
+
+main > h1, h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+main > h3, h4, h5, h6{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+main > p {
+    padding-bottom: 15px;
 }
 
 .full-container{
